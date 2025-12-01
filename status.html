@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>iRexen Status</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Bot Status</h1>
+
+<div id="status-card" class="card">
+  <p id="status-text">Checking status...</p>
+</div>
+
+<script>
+  async function checkStatus() {
+    const botId = "1442103668869562368";
+
+    try {
+      const res = await fetch(`https://discord.com/api/v10/users/${botId}`);
+
+      if (res.status === 200) {
+        document.getElementById("status-text").innerHTML =
+          "<span class='status-online'>🟢 ONLINE</span>";
+      } else {
+        document.getElementById("status-text").innerHTML =
+          "<span class='status-offline'>🔴 OFFLINE</span>";
+      }
+
+    } catch (e) {
+      document.getElementById("status-text").innerHTML =
+        "<span class='status-offline'>🔴 OFFLINE</span>";
+    }
+  }
+
+  checkStatus();
+  setInterval(checkStatus, 15000); // refresh every 15s
+</script>
+
+</body>
+</html>
