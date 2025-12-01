@@ -1,0 +1,63 @@
+/* Global styling for all pages */
+body {
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top, #2f3b68, #0d0d13 70%);
+  color: white;
+  text-align: center;
+  padding: 40px;
+  margin: 0;
+}
+
+h1 {
+  font-size: 50px;
+  background: linear-gradient(120deg, #3cf2ff, #5898ff);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 30px;
+}
+
+p {
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+button, .btn, a.btn {
+  display: inline-block;
+  background: #5865F2;
+  padding: 16px 40px;
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 21px;
+  transition: 0.25s;
+  box-shadow: 0 0 15px rgba(88,101,242,0.5);
+}
+
+button:hover, .btn:hover, a.btn:hover {
+  transform: translateY(-4px);
+  background: #4752C4;
+  box-shadow: 0 0 25px rgba(88,101,242,0.8);
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 12px;
+  margin: 15px auto;
+  width: 90%;
+  max-width: 600px;
+  backdrop-filter: blur(5px);
+  border-left: 5px solid #5865F2;
+}
+
+.status-online {
+  color: #5CFF7D;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.status-offline {
+  color: #FF6B6B;
+  font-size: 28px;
+  font-weight: bold;
+}
